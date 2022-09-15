@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ComponentsModule } from './components/components.module';
+import { LandingLayoutComponent } from './layouts/landing-layout/landing-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingLayoutComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    ComponentsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
