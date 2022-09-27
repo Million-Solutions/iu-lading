@@ -47,15 +47,15 @@
   <!--ligthBlue panel  -->
   <section class="mt-4 pb-5 pt-5 ligth-blue-panel w-100">
     <section class="pt-5">
-      <div class="container d-flex align-items-center flex-column" style="width: 55%; min-width: 55%">
+      <div class="container d-flex align-items-center flex-column" >
         <i class="fas fa-exchange-alt fa-2x"></i>
-        <h2 class="h2-big pt-3 text-center">
+        <h2 class="col-12 col-md-8 h2-big pt-3 text-center">
           La interacción digital entre el contador y el cliente es una necesidad.
         </h2>
-        <p class="fs-4 p-blue text-center py-4">
+        <p class="col-12 col-md-8 fs-4 p-blue text-center py-4">
           Aprovechamos la era digital y lo hacemos posible.
         </p>
-        <p class="text-center descriptions">
+        <p class="col-12 col-md-8 text-center descriptions">
           IU App Contable es el partner tecnológico que todo contador
           independiente y estudio contable necesita para lograr que su negocio
           siga creciendo. Es una plataforma y app móvil en la nube intuitiva,
@@ -145,14 +145,15 @@
               </h2>
               <p style="font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
             </div>
+
             <div class="col-lg-6">
-              <img src="../../../assets/img/HowDoesItWork/white.svg" alt="">
+              <img src="../../../assets/img/HowDoesItWork/white.svg" alt="" class="img-fluid">
             </div>
           </div>
         </div>
       </section>
 
-      <h2 class="text-center h2-medium pt-5">¿Cómo funciona?</h2>
+      <h2 class="text-center h2-medium pt-5" id="howDoesItWorki">¿Cómo funciona?</h2>
 
       <section class="mx-auto py-5" style="width: 70%">
         <div class="container">
@@ -244,13 +245,13 @@
   </section>
 
   <!-- digitalize service -->
-  <section class="mt-5 pt-5">
+  <section class="mt-5 pt-0 pt-lg-5">
     <section class="pt-5">
       <h2 class="text-center h2-medium pt-5">
         Con nosotros podrás
         <span class="span-color">digitalizar tu servicio contable</span>
       </h2>
-      <section class="mx-auto mt-5" style="width: 70%">
+      <section class="mx-auto mt-5" id="digitize">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
@@ -423,7 +424,7 @@
 
   <!-- Discover what UI Accounting App offers your clients -->
   <section class="container" style="margin-top: 6rem">
-    <section class="container">
+    <section class="container" id="features">
       <h2 class="h2-medium text-center mb-5">
         Descubre lo que
         <span class="span-color">IU App Contable le ofrece a tus clientes</span>
@@ -482,7 +483,7 @@
           <h2 class="h2-small my-5 span-color">
             Aquí 4 razones que te harán cambiar de opinión:
           </h2>
-          <div style="width: 80%">
+          <div class="col-12 col-md-10">
             <div class="container d-flex">
               <div class="circle-number">
                 <p class="text-white fw-bold fs-5">1</p>
@@ -533,11 +534,11 @@
   </section>
 
   <!-- plans-->
-  <section style="margin-top: 6rem">
+  <section style="margin-top: 6rem" id="prices">
     <section class="">
       <h1 class="h1-medium text-center mt-5">Planes</h1>
       <div class="d-flex justify-content-center">
-        <p class="p-small text-center" style="width: 25%; font-weight: 500;">
+        <p class="p-small text-center col-10 col-md-7 col-lg-5 col-xl-3" style="font-weight: 500;">
           ¡No esperes más y haz que tu negocio contable comience a crecer!
         </p>
       </div>
@@ -672,7 +673,7 @@
   </section>
 
   <!-- frequent questions -->
-  <section class="container w-75 mb-5 pb-5" style="margin-top: 6rem">
+  <section class="container col-12 col-lg-9  mb-5 pb-5" style="margin-top: 6rem">
     <section class="container py-5">
       <h2 class="h2-max text-center">Preguntas frecuentes</h2>
       <div class="container">
@@ -746,62 +747,79 @@
     <h2 class="h2-medium text-center">Lo que dicen nuestros clientes</h2>
     
     <div class="slider overflow-hidden">
-      <div class="slide-track mt-5">
-        <div class="shadow-1 blue-panel px-5 pb-3 pt-5 slide">
-          <i class="fas fa-quote-right fa-2x" style="color: black"></i>
-          <p class="p-small">Fabian Castillo</p>
-          <p class="p-ultra-small mb-0">Contador independiente</p>
-          <p class="mb-0 p-xxs">
-            Gracias a este software he mejorado la experiencia de usuario de mis clientes, ellos reciben todo lo que necesitan a través de Iuapp. Al entregarle una app a mis clientes hemos resuelto un gran problema
-          </p>
+      <div class="slide-track mt-5 row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="h-100 shadow-1 blue-panel px-5 pb-3 pt-5 slide">
+            <i class="fas fa-quote-right fa-2x" style="color: black"></i>
+            <p class="p-small">Fabian Castillo</p>
+            <p class="p-ultra-small mb-0">Contador independiente</p>
+            <p class="mb-0 p-xxs">
+              Gracias a este software he mejorado la experiencia de usuario de mis clientes, ellos reciben todo lo que necesitan a través de Iuapp. Al entregarle una app a mis clientes hemos resuelto un gran problema
+            </p>
+          </div>
         </div>
-        <div class="shadow-1 px-5 pb-3 pt-5 slide">
-          <i class="fas fa-quote-right fa-2x" style="color: black"></i>
-          <p class="p-small">Cristian Hernández</p>
-          <p class="p-ultra-small mb-0">Contador auditor</p>
-          <p class="mb-0 p-xxs">
-            Por fin los contadores contamos con una herramienta que nos facilita el flujo de trabajo y interacción con nuestros clientes, nos permitió digital nuestros servicios y mantener una comunicación fluida con ellos
-          </p>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="h-100 shadow-1 px-5 pb-3 pt-5 slide">
+            <i class="fas fa-quote-right fa-2x" style="color: black"></i>
+            <p class="p-small">Cristian Hernández</p>
+            <p class="p-ultra-small mb-0">Contador auditor</p>
+            <p class="mb-0 p-xxs">
+              Por fin los contadores contamos con una herramienta que nos facilita el flujo de trabajo y interacción con nuestros clientes, nos permitió digital nuestros servicios y mantener una comunicación fluida con ellos
+            </p>
+          </div>
         </div>
-        <div class="shadow-1 blue-panel px-5 pb-3 pt-5 slide">
-          <i class="fas fa-quote-right fa-2x" style="color: black"></i>
-          <p class="p-small">Claudia Campos</p>
-          <p class="p-ultra-small mb-0">Contador independiente</p>
-          <p class="mb-0 p-xxs">
-            Iuapp Contable hizo posible que mi negocio contable. Hoy tengo más clientes y están felices con el servicio que entrego
-          </p>
+        
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="h-100 shadow-1 blue-panel px-5 pb-3 pt-5 slide">
+            <i class="fas fa-quote-right fa-2x" style="color: black"></i>
+            <p class="p-small">Claudia Campos</p>
+            <p class="p-ultra-small mb-0">Contador independiente</p>
+            <p class="mb-0 p-xxs">
+              Iuapp Contable hizo posible que mi negocio contable. Hoy tengo más clientes y están felices con el servicio que entrego
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="slider overflow-hidden">
-      <div class="slide-track mb-5">
-        <div class="shadow-1 blue-panel px-5 pb-3 pt-5 slide">
-          <i class="fas fa-quote-right fa-2x" style="color: black"></i>
-          <p class="p-small">Fabian Castillo</p>
-          <p class="p-ultra-small mb-0">Contador independiente</p>
-          <p class="mb-0 p-xxs">
-            Gracias a este software he mejorado la experiencia de usuario de mis clientes, ellos reciben todo lo que necesitan a través de Iuapp. Al entregarle una app a mis clientes hemos resuelto un gran problema
-          </p>
+      <div class="slide-track mt-2 row mb-5">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="h-100 shadow-1 px-5 pb-3 pt-5 slide">
+            <i class="fas fa-quote-right fa-2x" style="color: black"></i>
+            <p class="p-small">blue-panel</p>
+            <p class="p-ultra-small mb-0">Contador auditor</p>
+            <p class="mb-0 p-xxs">
+              Desde que uso Iuapp puedo administrar mejor mi tiempo, organizo mejor la comunicación con mis clientes y digitalizamos nuestros servicios contables y de remuneraciones entregándoles un servicio de calidad.
+            </p>
+          </div>
         </div>
-        <div class="shadow-1 px-5 pb-3 pt-5 slide">
-          <i class="fas fa-quote-right fa-2x" style="color: black"></i>
-          <p class="p-small">Cristian Hernández</p>
-          <p class="p-ultra-small mb-0">Contador auditor</p>
-          <p class="mb-0 p-xxs">
-            Por fin los contadores contamos con una herramienta que nos facilita el flujo de trabajo y interacción con nuestros clientes, nos permitió digital nuestros servicios y mantener una comunicación fluida con ellos
-          </p>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="h-100 shadow-1 blue-panel px-5 pb-3 pt-5 slide">
+            <i class="fas fa-quote-right fa-2x" style="color: black"></i>
+            <p class="p-small">Barbara Morales</p>
+            <p class="p-ultra-small mb-0">Contador auditor</p>
+            <p class="mb-0 p-xxs">
+              Iuapp le dio ventajas competitivas a mi negocio, ahora ofrezco un servicio contable digital a mis clientes y me permite tener el control de mi empresa de contabilidad.
+            </p>
+          </div>
         </div>
-        <div class="shadow-1 blue-panel px-5 pb-3 pt-5 slide">
-          <i class="fas fa-quote-right fa-2x" style="color: black"></i>
-          <p class="p-small">Claudia Campos</p>
-          <p class="p-ultra-small mb-0">Contador independiente</p>
-          <p class="mb-0 p-xxs">
-            Iuapp Contable hizo posible que mi negocio contable. Hoy tengo más clientes y están felices con el servicio que entrego
-          </p>
+        
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="h-100 shadow-1  px-5 pb-3 pt-5 slide">
+            <i class="fas fa-quote-right fa-2x" style="color: black"></i>
+            <p class="p-small">Jessica Zamorano</p>
+            <p class="p-ultra-small mb-0">Contador auditor</p>
+            <p class="mb-0 p-xxs">
+              Desde que uso Iuapp puedo administrar mejor mi tiempo, organizo mejor la comunicación con mis clientes y digitalizamos nuestros servicios contables y de remuneraciones entregándoles un servicio de calidad.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- dark blue section -->
@@ -809,7 +827,7 @@
     <div class="container mx-auto d-flex flex-column justify-content-center rounded-7 p-5 my-5" style="background-color: white">
       <div class="d-flex align-items-center justify-items-center flex-wrap">
         <h2 class="text-start ms-3 mt-3">¡Conversemos!</h2>
-        <button class="button-form-active px-2 ms-5 d-flex align-items-center justify-content-center p-2 mt-3">
+        <button class="button-form-active px-2 ms-4 ms-md-5 d-flex align-items-center justify-content-center p-2 mt-3">
           <i class="fas fa-calendar-alt me-3 py-2 px-1"></i>Programar una reunión
         </button>
         <button class="button-form-inactive px-2 ms-4 d-flex align-items-center justify-content-center p-2 mt-3">
@@ -819,28 +837,28 @@
 
       <form action="" class="my-4">
         <div class="row g-2">
-          <div class="col-lg-6 position-rel">
+          <div class="col-lg-6 my-3 position-rel">
             <label for="form-label" class="position-abs">Nombre</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
-          <div class="col-lg-6 position-rel">
+          <div class="col-lg-6 my-3 position-rel">
             <label for="form-label" class="position-abs">Nombre de tu negocio contable</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
         </div>
-        <div class="row g-2 my-4">
-          <div class="col-lg-12 position-rel">
+        <div class="row g-2">
+          <div class="col-lg-12 my-3 position-rel">
             <label for="form-label" class="position-abs">Correo</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
         </div>
 
-        <div class="row g-2 mt-4">
-          <div class="col-lg-6 position-rel">
+        <div class="row g-2">
+          <div class="col-lg-6 my-3 position-rel">
             <label for="form-label" class="position-abs">Whatsapp</label>
             <input type="number" class="form-control py-2" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
-          <div class="col-lg-6 position-rel">
+          <div class="col-lg-6 my-3 position-rel">
             <label for="form-label" class="position-abs">Cantidad de Clientes</label>
             <select class="form-select py-2" id="floatingSelectGrid">
               <option selected>Selecciona una cantidad</option>
@@ -851,14 +869,13 @@
           </div>
         </div>
       </form>
-      <div
-        class="d-flex flex-row align-items-center justify-content-between mt-5"
-      >
-        <p class="p-ultra-small m-0">
-          Al continuar, acepto
-          <a href=""> políticas y condiciones y política de privacidad</a>
-        </p>
-        <button class="btn-1 rounded-50 px-3 py-3">Enviar y programar reunión</button>
+      
+        <div class="row align-items-center justify-content-between ">
+          <p class="col-12 col-md-9 mb-3 mb-md-0 p-ultra-small m-0">
+            Al continuar, acepto
+            <a href=""> políticas y condiciones y política de privacidad</a>
+          </p>
+          <button class="col btn-1 rounded-50 px-3 py-3">Enviar y programar reunión</button>
       </div>
     </div>
   </section>

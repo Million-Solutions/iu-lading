@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  constructor() {}
+  ngOnInit(): void {}
+  
+  ScrollIntoView(elem: string) {
+    document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-
 }
