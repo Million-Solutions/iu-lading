@@ -1,14 +1,8 @@
-<header class="navbar navbar-expand-sm py-3 position-sticky top-0  mb-2 bg-white" style="z-index: 200;">
-  <div class="container-fluid container">
-    <img
-        src="assets/img/logo.svg"
-        alt=""
-        width="192"
-        height="60"
-        class="d-inline-block align-text-top"
-      />
+<header class="navbar navbar-expand-sm py-3 position-sticky top-0 mb-2 bg-white" style="z-index: 200;">
+  <div class="container">
+    <img src="assets/img/logo.svg" alt="" width="192" height="60" class="d-inline-block align-text-top" />
     
-      <i
+    <i
       class="fas fa-bars navbar-toggler "
       type="button"
       data-bs-toggle="collapse"
@@ -19,27 +13,16 @@
     >
     </i>
     
-    
-    <nav class="navbar-collapse  justify-content-end" >
+    <nav class="navbar-collapse justify-content-end">
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <!-- <div class=" ">
-          <a routerLink="" routerLinkActive="active">¿Como funciona?</a>
-          <a routerLink="" routerLinkActive="active">Características</a>
-          <a routerLink="" routerLinkActive="active">Precios</a>
-          <button type="button" class=" btn-1 rounded-24 p-2">Ingreso Contador</button>
-          <button type="button" class="btn-2 rounded-24 p-2">Ingreso Cliente</button>
-        </div> -->
-
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex gap-4 p-2 align-items-center">
-          <li><a routerLink="" routerLinkActive="active">¿Como funciona?</a></li>
-          <li><a routerLink="" routerLinkActive="active">Características</a></li>
-          <li><a routerLink="" routerLinkActive="active">Precios</a></li>
+          <li><a class="d-block d-sm-none d-lg-block" routerLink="" routerLinkActive="active" (click)="ScrollIntoView('#howDoesItWorki')">¿Como funciona?</a></li>
+          <li><a class="d-block d-sm-none d-md-block" routerLink="" routerLinkActive="active" (click)="ScrollIntoView('#features')">Características</a></li>
+          <li><a class="d-block d-sm-none d-md-block" routerLink="" routerLinkActive="active" (click)="ScrollIntoView('#prices')">Precios</a></li>
           <li><button type="button" class="btn-1 rounded-24 px-4 py-2">Ingreso Contador</button></li>
           <li><button type="button" class="btn-2 rounded-24 px-4 py-2">Ingreso Cliente</button></li>
         </ul>
       </div>
     </nav>
-    
-    
   </div>
 </header>
