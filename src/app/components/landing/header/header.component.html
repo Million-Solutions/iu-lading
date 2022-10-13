@@ -5,17 +5,14 @@
       class="fas fa-bars navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+      data-bs-target="#nav"
     >
     </i>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-end" id="nav">
       <ul class="navbar-nav d-flex gap-4 align-items-center">
-        <li><a routerLinkActive="active" (click)="ScrollIntoView('#howDoesItWorki')">¿Como funciona?</a></li>
-        <li><a routerLinkActive="active" (click)="ScrollIntoView('#features')">Características</a></li>
-        <li><a routerLinkActive="active" (click)="ScrollIntoView('#prices')">Precios</a></li>
+        <li><a routerLinkActive="active" (click)="close()" (click)="ScrollIntoView('#howDoesItWorki')">¿Como funciona?</a></li>
+        <li><a routerLinkActive="active" (click)="close()" (click)="ScrollIntoView('#features')">Características</a></li>
+        <li><a routerLinkActive="active" (click)="close()" (click)="ScrollIntoView('#prices')">Precios</a></li>
         <li><button type="button" class="btn-1 rounded-24 px-4 py-2">Ingreso Contador</button></li>
         <li><button type="button" class="btn-2 rounded-24 px-4 py-2">Ingreso Cliente</button></li>
       </ul>

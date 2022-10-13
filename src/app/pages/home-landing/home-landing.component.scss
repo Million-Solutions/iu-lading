@@ -250,20 +250,6 @@
     filter: brightness(.2);
 }
 
-/* Media Query */
-@media (max-width: 450px) {
-    .logos {
-        flex-direction: column;
-    }
-    .logos div {
-        display: flex;
-        flex-direction: column;
-        margin-top: 5px;
-    }
-    .logos div .p-blue {
-        margin-bottom: 20px;
-    }
-}
 @media (max-width: 480px) {
     .scale-your-service h1 {
         font-size: calc(3rem - 10px) !important;
@@ -278,9 +264,6 @@
     }
     .h2-big {
         font-size: 1.8rem !important;
-    }
-    .p-blue {
-        font-size: 1.2rem !important;
     }
     .p-small {
         font-size: 14px;

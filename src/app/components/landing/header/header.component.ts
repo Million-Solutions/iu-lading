@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $:any
 @Component({
   selector: 'app-landing-header',
   templateUrl: './header.component.html',
@@ -12,5 +12,10 @@ export class HeaderComponent implements OnInit {
   
   ScrollIntoView(elem: string) {
     document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  close(){
+    const a = document.querySelector('#nav')
+    a?.classList.remove('show')
   }
 }
