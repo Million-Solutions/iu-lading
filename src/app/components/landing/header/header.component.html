@@ -1,9 +1,8 @@
-<header class="navbar navbar-expand-sm py-3 position-sticky top-0 mb-2 bg-white" style="z-index: 200;">
-  <div class="container">
-    <img src="assets/img/logo.svg" alt="" width="192" height="60" class="d-inline-block align-text-top" />
-    
+<header class="position-sticky top-0" style="z-index: 200; background-color: #fcfcfc;">
+  <nav class="navbar navbar-expand-lg py-3 mx-auto col-xl-11 px-4">
+    <img src="assets/img/logo.svg" alt="logo" width="160" />
     <i
-      class="fas fa-bars navbar-toggler "
+      class="fas fa-bars navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
@@ -12,17 +11,14 @@
       aria-label="Toggle navigation"
     >
     </i>
-    
-    <nav class="navbar-collapse justify-content-end">
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex gap-4 p-2 align-items-center">
-          <li><a class="d-block d-sm-none d-lg-block" routerLink="" routerLinkActive="active" (click)="ScrollIntoView('#howDoesItWorki')">¿Como funciona?</a></li>
-          <li><a class="d-block d-sm-none d-md-block" routerLink="" routerLinkActive="active" (click)="ScrollIntoView('#features')">Características</a></li>
-          <li><a class="d-block d-sm-none d-md-block" routerLink="" routerLinkActive="active" (click)="ScrollIntoView('#prices')">Precios</a></li>
-          <li><button type="button" class="btn-1 rounded-24 px-4 py-2">Ingreso Contador</button></li>
-          <li><button type="button" class="btn-2 rounded-24 px-4 py-2">Ingreso Cliente</button></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav d-flex gap-4 align-items-center">
+        <li><a routerLinkActive="active" (click)="ScrollIntoView('#howDoesItWorki')">¿Como funciona?</a></li>
+        <li><a routerLinkActive="active" (click)="ScrollIntoView('#features')">Características</a></li>
+        <li><a routerLinkActive="active" (click)="ScrollIntoView('#prices')">Precios</a></li>
+        <li><button type="button" class="btn-1 rounded-24 px-4 py-2">Ingreso Contador</button></li>
+        <li><button type="button" class="btn-2 rounded-24 px-4 py-2">Ingreso Cliente</button></li>
+      </ul>
+    </div>
+  </nav>
+</header> 
