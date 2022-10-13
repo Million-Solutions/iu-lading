@@ -13,13 +13,14 @@ a{
     background-color: #1f2fed;
   }
   .bg-gray{
-    background-color: #f2f5f7;
+    background-color: #f6f6f8;
   }
   .btn-1{
     background: linear-gradient(180deg, #607EF6 0%, #304ED6 100%) !important;
     color: #F6F4FB !important;
     font-weight: 590;
     border: none;
+    padding: 12px 20px;
     &:hover{
       background: linear-gradient(0deg, #708bfd, #3656db) !important;
     }
