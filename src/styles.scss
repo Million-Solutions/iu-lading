@@ -94,3 +94,19 @@ a{
 .fs-8{
   font-size: calc(0.5vw + 36px);
 }
+
+.form-control, .form-select{
+  box-shadow: none !important;
+  padding: 12px !important;
+  height: 50px !important;
+}
+.form-floating > label{
+  line-height: 1;
+  height: auto;
+}
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-select ~ label {
+  opacity: 1;
+  padding: 8px 12px !important;
+  transform: scale(0.85) translateY(-1.15rem) translateX(0.40rem);
+  background-color: #fff;
+}

@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLandingComponent implements OnInit {
   str = 'Mensual'
-  letsTalk = true
   price = ['$35.000','$65.000','$90.000']
 
   constructor() {}
   ngOnInit(): void {}
 
+  ScrollIntoView(elem: string) {
+    document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
