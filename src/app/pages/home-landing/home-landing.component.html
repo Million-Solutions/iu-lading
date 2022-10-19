@@ -437,7 +437,7 @@
 
   <!-- What our clients say -->
   <h2 class="fs-7 text-center" style="margin-top: calc(1vh * 14)">Lo que dicen nuestros clientes</h2>
-  <section class="d-flex flex-wrap justify-content-center gap-4">
+  <section class="d-flex flex-wrap justify-content-center gap-4 px-4">
     <div class="shadow-1 rounded-16 mt-3 p-5 bg-clients" style="width: 511px;">
       <div class="d-flex justify-content-between">
         <i class="fas fa-quote-right fa-2x"></i>
@@ -474,24 +474,6 @@
       <p class="fw-500">Contador auditor</p>
       <p>Desde que uso IU App puedo administrar mejor mi tiempo, organizo mejor la comunicación con mis clientes y digitalizamos nuestros servicios contables y de remuneraciones entregándoles un servicio de calidad.</p>
     </div>
-    <div class="shadow-1 rounded-16 mt-3 p-5 bg-clients" style="width: 511px;">
-      <div class="d-flex justify-content-between ">
-        <i class="fas fa-quote-right fa-2x"></i>
-        <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
-      </div>
-      <p class="fs-5 fw-700 mt-3">Barbara Morales</p>
-      <p class="fw-500">Contador auditor</p>
-      <p>IU App le dio ventajas competitivas a mi negocio, ahora ofrezco un servicio contable digital a mis clientes y me permite tener el control de mi empresa de contabilidad.</p>
-    </div>
-    <div class="shadow-1 rounded-16 mt-3 p-5" style="width: 511px;">
-      <div class="d-flex justify-content-between ">
-        <i class="fas fa-quote-right fa-2x"></i>
-        <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
-      </div>
-      <p class="fs-5 fw-700 mt-3">Jessica Zamorano</p>
-      <p class="fw-500">Contador auditor</p>
-      <p>Desde que uso IU App puedo administrar mejor mi tiempo, organizo mejor la comunicación con mis clientes y digitalizamos nuestros servicios contables y de remuneraciones entregándoles un servicio de calidad.</p>
-    </div>
   </section>
 
   <!-- dark blue section -->
@@ -499,11 +481,10 @@
     <div class="container bg-white rounded-16 p-5">
       <div class="d-flex flex-wrap align-items-center">
         <h2 class="me-4 fs-7 fw-500">¡Conversemos!</h2>
-        <div>
-          <button class="ms-0 ms-md-4 py-3 my-2 button-form-active">
-            <i class="px-3 fs-5 fas fa-calendar-alt">&nbsp;&nbsp;&nbsp;<span> Programar una reunión</span></i>
-          </button>
-        </div>
+        <button class="ms-0 ms-md-4 py-3 px-3 my-2 button-form-active">
+          <i class="fs-5 fas fa-calendar-alt"></i>&nbsp;&nbsp;
+          <span class="fw-590"> Programar una reunión</span>
+        </button>
       </div>
       <form class="mt-4 flex-wrap justify-content-between" action="">
         <div class="g-4 row">
@@ -539,9 +520,23 @@
         </div>
         <div class="mt-4 d-flex justify-content-between flex-wrap">
           <p class="col-12 col-lg-8"><small>Al continuar, acepto <strong><a href="" class="text-dark"> políticas y condiciones y política de privacidad</a></strong></small></p>
-          <button class="col-12 col-lg-4 btn-1 rounded-pill" type="submit">Enviar y programar reunión</button>
+          <button class="col-12 col-lg-4 btn-1 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar y programar reunión</button>
         </div>
       </form>
     </div>
   </section>
+  
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body" style="overflow: hidden !important;">
+          <iframe src="https://calendly.com/iuappcl" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+        <div class="mb-3 ms-3">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
