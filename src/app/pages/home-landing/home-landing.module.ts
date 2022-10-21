@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeLandingRoutingModule } from './home-landing.routing';
 import { HomeLandingComponent } from './home-landing.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,6 +10,7 @@ import { HomeLandingComponent } from './home-landing.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     HomeLandingRoutingModule,
   ]
 })
