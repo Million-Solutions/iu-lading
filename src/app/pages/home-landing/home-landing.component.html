@@ -7,7 +7,7 @@
       <p class="my-4 color-3 fs-5 fw-500">
         ¡Digitaliza tus servicios y obtén más rapidez y eficiencia para atender a muchos más clientes! IU App Contable es una plataforma y App que te permitirá maximizar y agilizar el intercambio de información con tus clientes.
       </p>
-      <a class="btn btn-1 rounded-pill" href="#form">¡Quiero saber más!</a>
+      <a class="btn btn-1 rounded-pill" (click)="ScrollIntoView('#digitalInt')">¡Quiero saber más!</a>
     </div>
     <div class="col-xxl-5 col-lg-6 col-md-8 col-12">
       <img src="assets/img/landing/viewsAppImage.svg" width="100%" style="object-fit: contain;" alt="viewsAppImage">
@@ -19,6 +19,7 @@
     <img width="110px" src="assets/img/logo.svg" alt="logo"/>
     <span class="fs-5 fw-500 color-1">se integra con</span>
     <img width="40px" src="assets/img/Logo_de_Servicio_de_Impuestos_Internos.png" alt="logoSii"/>
+    <p id="digitalInt"></p>
   </section>
 
   <!-- ligthBlue panel -->
@@ -31,8 +32,8 @@
         IU App Contable es el partner tecnológico que todo contador independiente y estudio contable necesita para lograr que su negocio siga creciendo. 
         Es una plataforma y app móvil en la nube intuitiva, interactiva y muy versátil para hacer más eficiente la entrega de tu servicio contable.
       </p>
-      <button class="btn-1 rounded-pill">¡Quiero saber más!</button>
-    </section>
+      <button class="btn-1 rounded-pill" (click)="ScrollIntoView('#bestOption')">¡Quiero saber más!</button>
+  </section>
     <section class="container text-lg-start text-center">
       <section class="d-flex justify-content-between align-items-center flex-wrap mt-5">
         <div class="col-xxl-4 col-xl-5 col-lg-6 col-sm-10 col-12 mx-auto">
@@ -68,6 +69,7 @@
         </div>
         <div class="col-xxl-5 col-lg-6 col-sm-10 col-12 mx-auto">
           <img src="assets/img/landing/mobileViewSecondaryCircleBehind.svg" width="100%" alt="mobileViewSecondaryCircleBehind" />
+          <p id="bestOption"></p>
         </div>
       </section>
     </section>
@@ -137,45 +139,45 @@
   </section> 
   
   <!-- digitalize service -->
-  <h2 class="text-center fs-7 mb-5 mx-4" style="margin-top: calc(1vh * 20);">Con nosotros podrás <span class="color-1">digitalizar tu servicio contable</span></h2>
+  <h2 class="text-center fs-7 mb-3 mb-lg-5 mx-4" style="margin-top: calc(1vh * 20);">Con nosotros podrás <span class="color-1">digitalizar tu servicio contable</span></h2>
   <div class="container d-flex flex-wrap justify-content-around gap-1">
-    <div class="col-11 col-lg-4 d-flex mt-3">
-      <i class="fas fa-mobile-alt fa-3x color-1 me-4"></i>
+    <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3 justify-content-center">
+      <i class="fas fa-mobile-alt fs-1 color-1 me-0 me-lg-4"></i>
       <div>
         <span class="fs-5 fw-700 color-2">App móvil</span>
         <p class="fs-5 color-3 fw-500">Entrega toda la información contable a tus clientes en la palma de su mano y en tiempo real.</p>
       </div>
     </div>
-    <div class="col-11 col-lg-4 d-flex mt-3">
-      <i class="fas fa-desktop fa-3x color-1 me-4"></i>
+    <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3">
+      <i class="fas fa-desktop fs-1 color-1 me-0 me-lg-4"></i>
       <div>
         <span class="fs-5 fw-700 color-2">Digitalización</span>
         <p class="fs-5 color-3 fw-500">Ahora podrás prestar tu servicio contable de forma online. Ofrecerás respuestas más rápidas y oportunas.</p>
       </div>
     </div>
-    <div class="col-11 col-lg-4 d-flex mt-3">
-      <i class="fas fa-paste fa-3x color-1 me-4"></i>
+    <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3">
+      <i class="fas fa-paste fs-1 color-1 me-0 me-lg-4"></i>
       <div>
         <span class="fs-5 fw-700 color-2">Envío de Reportes</span>
         <p class="fs-5 color-3 fw-500">Tú y tus clientes tendrán siempre disponible la información necesaria para tomar mejores decisiones en su móvil.</p>
       </div>
     </div>
-    <div class="col-11 col-lg-4 d-flex mt-3">
-      <i class="fas fa-cog fa-3x color-1 me-4"></i>
+    <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3">
+      <i class="fas fa-cog fs-1 color-1 me-0 me-lg-4"></i>
       <div>
         <span class="fs-5 fw-700 color-2">Integraciones</span>
         <p class="fs-5 color-3 fw-500">Nos conectamos con el SII para que tú y tus clientes puedan ver sus compras y ventas en tiempo real.</p>
       </div>
     </div>
-    <div class="col-11 col-lg-4 d-flex mt-3">
-      <i class="far fa-bell fa-3x color-1 me-4"></i>
+    <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3">
+      <i class="far fa-bell fs-1 color-1 me-0 me-lg-4"></i>
       <div>
         <span class="fs-5 fw-700 color-2">Alertas de recordatorio</span>
         <p class="fs-5 color-3 fw-500">A través de IU App Contable podras enviar alertas de recordatorio a tus clientes.</p>
       </div>
     </div>
-    <div class="col-11 col-lg-4 d-flex mt-3">
-      <i class="fas fa-user-friends fa-3x color-1 me-4"></i>
+    <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3">
+      <i class="fas fa-user-friends fs-1 color-1 me-0 me-lg-4"></i>
       <div>
         <span class="fs-5 fw-700 color-2">Experiencia de usuario</span>
         <p class="fs-5 color-3 fw-500">Tendrás siempre una comunicación fluida y oportuna con tus clientes, podrás dar respuestas desde cualquier lugar y en cualquier momento</p>
@@ -435,8 +437,8 @@
 
   <!-- What our clients say -->
   <h2 class="fs-7 text-center" style="margin-top: calc(1vh * 14)">Lo que dicen nuestros clientes</h2>
-  <section class="d-flex flex-wrap justify-content-around mx-3">
-    <div class="shadow-1 rounded-16 mt-5 p-5 bg-clients" style="width: 511px;">
+  <section class="d-flex flex-wrap justify-content-center gap-4 px-4">
+    <div class="shadow-1 rounded-16 mt-3 p-5 bg-clients" style="width: 511px;">
       <div class="d-flex justify-content-between">
         <i class="fas fa-quote-right fa-2x"></i>
         <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
@@ -445,7 +447,7 @@
       <p class="fw-500">Contador independiente</p>
       <p>Gracias a este software he mejorado la experiencia de usuario de mis clientes, ellos reciben todo lo que necesitan a través de IU App. Al entregarle una app a mis clientes hemos resuelto un gran problema</p>
     </div>  
-    <div class="shadow-1 rounded-16 mt-5 p-5" style="width: 511px;">
+    <div class="shadow-1 rounded-16 mt-3 p-5" style="width: 511px;">
       <div class="d-flex justify-content-between">
         <i class="fas fa-quote-right fa-2x"></i>
         <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
@@ -454,7 +456,7 @@
       <p class="fw-500">Contador auditor</p>
       <p>Por fin los contadores contamos con una herramienta que nos facilita el flujo de trabajo y interacción con nuestros clientes, nos permitió digital nuestros servicios y mantener una comunicación fluida con ellos</p>
     </div>  
-    <div class="shadow-1 rounded-16 mt-5 p-5 bg-clients" style="width: 511px;">
+    <div class="shadow-1 rounded-16 mt-3 p-5 bg-clients" style="width: 511px;">
       <div class="d-flex justify-content-between">
         <i class="fas fa-quote-right fa-2x"></i>
         <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
@@ -463,26 +465,8 @@
       <p class="fw-500">Contador independiente</p>
       <p>IU App Contable hizo posible que mi negocio contable. Hoy tengo más clientes y están felices con el servicio que entrego</p>
     </div>
-    <div class="shadow-1 rounded-16 mt-5 p-5" style="width: 511px;">
+    <div class="shadow-1 rounded-16 mt-3 p-5" style="width: 511px;">
       <div class="d-flex justify-content-between">
-        <i class="fas fa-quote-right fa-2x"></i>
-        <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
-      </div>
-      <p class="fs-5 fw-700 mt-3">Jessica Zamorano</p>
-      <p class="fw-500">Contador auditor</p>
-      <p>Desde que uso IU App puedo administrar mejor mi tiempo, organizo mejor la comunicación con mis clientes y digitalizamos nuestros servicios contables y de remuneraciones entregándoles un servicio de calidad.</p>
-    </div>
-    <div class="shadow-1 rounded-16 mt-5 p-5 bg-clients" style="width: 511px;">
-      <div class="d-flex justify-content-between ">
-        <i class="fas fa-quote-right fa-2x"></i>
-        <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
-      </div>
-      <p class="fs-5 fw-700 mt-3">Barbara Morales</p>
-      <p class="fw-500">Contador auditor</p>
-      <p>IU App le dio ventajas competitivas a mi negocio, ahora ofrezco un servicio contable digital a mis clientes y me permite tener el control de mi empresa de contabilidad.</p>
-    </div>
-    <div class="shadow-1 rounded-16 mt-5 p-5" style="width: 511px;">
-      <div class="d-flex justify-content-between ">
         <i class="fas fa-quote-right fa-2x"></i>
         <img src="../../../assets/img/landing/five.svg" alt="five" width="100px" class="imgFilter">
       </div>
@@ -495,13 +479,11 @@
   <!-- dark blue section -->
   <section class="dark-blue-panel" style="margin-top: calc(1vh * 14); padding-top: calc(1vh * 14); padding-bottom: calc(1vh * 14);">
     <div class="container bg-white rounded-16 p-5">
-      <div class="d-flex flex-wrap align-items-center gap-3">
-        <h2 class="me-4 fs-7 fw-500 me-auto">¡Conversemos!</h2>
-        <button class="btn btn-1" [style.opacity]="letsTalk ? 1 : 0.5" (click)="letsTalk = true">
-          <i class="px-3 fs-5 fas fa-calendar-alt">&nbsp;&nbsp;&nbsp;<span> Programar una reunión</span></i>
-        </button>
-        <button class="btn btn-1" [style.opacity]="letsTalk ? 0.5 : 1" (click)="letsTalk = false">
-          <i class="px-3 fs-5 fab fa-whatsapp">&nbsp;&nbsp;&nbsp;<span> Chat por Whatsapp</span></i>
+      <div class="d-flex flex-wrap align-items-center">
+        <h2 class="me-4 fs-7 fw-500">¡Conversemos!</h2>
+        <button class="ms-0 ms-md-4 py-3 px-3 my-2 button-form-active">
+          <i class="fs-5 fas fa-calendar-alt"></i>&nbsp;&nbsp;
+          <span class="fw-590"> Programar una reunión</span>
         </button>
       </div>
       <form class="mt-4 flex-wrap justify-content-between" action="">
@@ -538,9 +520,23 @@
         </div>
         <div class="mt-4 d-flex justify-content-between flex-wrap">
           <p class="col-12 col-lg-8"><small>Al continuar, acepto <strong><a href="" class="text-dark"> políticas y condiciones y política de privacidad</a></strong></small></p>
-          <button class="col-12 col-lg-4 btn-1 rounded-pill" type="submit">{{letsTalk ? 'Enviar y programar reunión' : 'Contactame por WhatsApp'}}</button>
+          <button class="col-12 col-lg-4 btn-1 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar y programar reunión</button>
         </div>
       </form>
     </div>
   </section>
+  
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body" style="overflow: hidden !important;">
+          <iframe src="https://calendly.com/iuappcl" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+        <div class="mb-3 ms-3">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
