@@ -495,16 +495,14 @@
   <!-- dark blue section -->
   <section class="dark-blue-panel" style="margin-top: calc(1vh * 14); padding-top: calc(1vh * 14); padding-bottom: calc(1vh * 14);">
     <div class="container bg-white rounded-16 p-5">
-      <div class="d-flex flex-wrap align-items-center">
-        <h2 class="me-4 fs-7 fw-500">¡Conversemos!</h2>
-        <div>
-          <button class="ms-0 ms-md-4 py-3 my-2" [ngClass]="letsTalk ? 'button-form-active' : 'button-form-inactive'" (click)="letsTalk = true">
-            <i class="px-3 fs-5 fas fa-calendar-alt">&nbsp;&nbsp;&nbsp;<span> Programar una reunión</span></i>
-          </button>
-          <button class="ms-0 ms-md-4 py-3 my-2" [ngClass]="!letsTalk ? 'button-form-active' : 'button-form-inactive'" (click)="letsTalk = false">
-            <i class="px-3 fs-5 fab fa-whatsapp">&nbsp;&nbsp;&nbsp;<span> Chat por Whatsapp</span></i>
-          </button>
-        </div>
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <h2 class="me-4 fs-7 fw-500 me-auto">¡Conversemos!</h2>
+        <button class="btn btn-1" [style.opacity]="letsTalk ? 1 : 0.5" (click)="letsTalk = true">
+          <i class="px-3 fs-5 fas fa-calendar-alt">&nbsp;&nbsp;&nbsp;<span> Programar una reunión</span></i>
+        </button>
+        <button class="btn btn-1" [style.opacity]="letsTalk ? 0.5 : 1" (click)="letsTalk = false">
+          <i class="px-3 fs-5 fab fa-whatsapp">&nbsp;&nbsp;&nbsp;<span> Chat por Whatsapp</span></i>
+        </button>
       </div>
       <form class="mt-4 flex-wrap justify-content-between" action="">
         <div class="g-4 row">
