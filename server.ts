@@ -5,7 +5,8 @@ import {ngExpressEngine} from '@nguniversal/express-engine';
 import * as express from 'express';
 import {existsSync} from 'fs';
 import {join} from 'path';
-
+import * as https from 'https';
+import * as fs from 'fs';
 import {AppServerModule} from './src/main.server';
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -14,6 +15,7 @@ export function app(): express.Express {
   const distFolder = join(process.cwd(), 'dist/landin_page_IU/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
+  
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
   server.engine('html', ngExpressEngine({
     bootstrap: AppServerModule,
@@ -40,8 +42,11 @@ export function app(): express.Express {
 function run(): void {
   const port = process.env['PORT'] || 4000;
 
-  // Start up the Node server
-  const server = app();
+// https certificates
+    const privateKey = fs.readFileSync('/etc/letsencrypt/live/iuapp.cl/privkey.pem');
+    const certificate = fs.readFileSync('/etc/letsencrypt/live/iuapp.cl/fullchain.pem');
+    // Start up the Node server
+    const server = https.createServer({ key: privateKey, cert: certificate }, app());
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
