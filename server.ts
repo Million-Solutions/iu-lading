@@ -33,6 +33,9 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
+    if(!res.secure){
+      return res.redirect("https://" + request.headers.host + request.url);
+    }
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
 
@@ -41,13 +44,16 @@ export function app(): express.Express {
 
 function run(): void {
   const port = process.env['PORT'] || 4000;
-
+  const serverhttp = app();
 // https certificates
     const privateKey = fs.readFileSync('/etc/letsencrypt/live/iuapp.cl/privkey.pem');
     const certificate = fs.readFileSync('/etc/letsencrypt/live/iuapp.cl/fullchain.pem');
     // Start up the Node server
     const server = https.createServer({ key: privateKey, cert: certificate }, app());
   server.listen(port, () => {
+    console.log(`Node Express server listening on http://localhost:${port}`);
+  });
+  serverhttp.listen(80, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
