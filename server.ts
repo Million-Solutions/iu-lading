@@ -34,7 +34,7 @@ export function app(): express.Express {
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
     if(!res.secure){
-      return res.redirect("https://" + request.headers.host + request.url);
+      return res.redirect("https://" + req.headers.host + req.url);
     }
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
