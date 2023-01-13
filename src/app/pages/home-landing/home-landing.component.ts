@@ -1,5 +1,6 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../../shared/services/message.service';
 
 @Component({
   selector: 'app-home-landing',
@@ -11,35 +12,39 @@ export class HomeLandingComponent implements OnInit {
   price: Array<string> = ['$35.000','$65.000','$90.000']
   alert: any = {type: '', text: ''}
   spinner: boolean = false
-  form: FormGroup
-  
-  constructor() {}
+
+  constructor(private messageSv: MessageService){
+
+  }
 
   ngOnInit(): void {
-    this.initForm()
+      
   }
 
-  initForm() {
-    this.form = new FormGroup({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      phone: new FormControl('', Validators.required),
-      business_name: new FormControl('', Validators.required),
-      count_client: new FormControl('1', Validators.required),
+  formMessage = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    business: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required)
+  })
+
+  sendMessage(form:any){
+    if(this.formMessage.invalid) return this.MyAlert('danger', 'Por favor asegurese de haber llenado todos los campos')
+    this.spinner = true
+    this.messageSv.postMessage(form).toPromise().then(data =>{
+      this.formMessage.reset()
+      this.MyAlert('success', 'Mensaje enviado con exito!')
+      this.spinner = false
+    }).catch(error =>{
+      this.MyAlert('danger', error.error.message)
     })
   }
-  
-  sendForm() {
-    if(this.form.invalid) return this.Alert('danger', 'Asegurate de haber completado todos los campos!')
-    this.spinner = true
-    setTimeout(() => {
-      this.spinner = false
-    }, 0);
-  }
 
-  Alert(type: string, text: string) {
-    this.alert = { type: type, text: text }
-    setTimeout(() => this.alert = {type: '', text: ''}, 3000);
+  MyAlert(type: string, text: string){
+    this.alert = {type: type, text: text}
+    setTimeout(() => {
+      this.alert = {type: '', text: ''}
+    }, 3000);
   }
 
   ScrollInto(item: any) {

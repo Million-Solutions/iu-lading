@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { LandingLayoutComponent } from './layouts/landing-layout/landing-layout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LandingLayoutComponent } from './layouts/landing-layout/landing-layout.
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ComponentsModule,
+    HttpClientModule,
     FontAwesomeModule,
   ],
   providers: [],

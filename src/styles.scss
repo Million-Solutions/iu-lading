@@ -99,6 +99,10 @@ a{
   padding: 12px !important;
   height: 50px !important;
 }
+textarea.form-control{
+  resize: none;
+  height: 107px !important;
+}
 .form-floating > label{
   line-height: 1;
   height: auto;
