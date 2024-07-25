@@ -25,7 +25,6 @@ a{
   background: linear-gradient(180deg, #607EF6 0%, #304ED6 100%) !important;
   color: #F6F4FB !important;
   font-weight: 590;
-  border: none;
   padding: 12px 20px;
   &:hover{
     background: linear-gradient(0deg, #708bfd, #3656db) !important;
@@ -34,6 +33,10 @@ a{
     box-shadow: 0 0 0 3.5px #3657db5d;
   }
 }
+.btn-1-md{
+  font-weight: 400;
+  padding: 8px 16px;
+}
 
 .btn-2{
   background-color: white;
@@ -41,7 +44,15 @@ a{
   color: #607ef6 ;
 }
 .btn-3{
-  background-color: #dce2f9;
+  background: #e1e1fb !important;
+  color: #5b78ee !important;
+  border: none;
+  &:hover{
+    background: #d1d1f0 !important;
+  }
+  &:focus{
+    box-shadow: 0 0 0 3.5px #e1e1fb74;
+  }
 }
 .btn-gray{
   background-color: #dddddd;
@@ -112,4 +123,25 @@ textarea.form-control{
   padding: 8px 12px !important;
   transform: scale(0.85) translateY(-1.15rem) translateX(0.40rem);
   background-color: #fff;
+}
+.my-modal, .my-modal-sm, .my-modal-xm {
+  height: 100%;
+  display: flex;
+  margin: auto !important;
+  max-width: 1100px !important;
+  padding: 0 15px;
+}
+.my-modal-sm {
+  max-width: 600px !important;
+}
+.my-modal-xm {
+  max-width: 350px !important;
+}
+.modal-content {
+  margin: auto;
+  border-radius: 15px !important;
+}
+.modal-body {
+  max-height: calc(100vh - 200px);
+  overflow: auto;
 }

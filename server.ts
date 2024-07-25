@@ -1,61 +1,54 @@
+/***************************************************************************************************
+ * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
+ */
+import '@angular/localize/init';
 import 'zone.js/dist/zone-node';
 
-import {APP_BASE_HREF} from '@angular/common';
-import {ngExpressEngine} from '@nguniversal/express-engine';
+import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
-import {existsSync} from 'fs';
-import {join} from 'path';
-import * as https from 'https';
-import * as fs from 'fs';
-import {AppServerModule} from './src/main.server';
+import { join } from 'path';
+
+import { AppServerModule } from './src/main.server';
+import { APP_BASE_HREF } from '@angular/common';
+import { existsSync } from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
-  const server = express();
-  const distFolder = join(process.cwd(), 'dist/landin_page_IU/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+    const server = express();
+    const distFolder = join(process.cwd(), 'dist');
+    const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
-  
-  // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
-  server.engine('html', ngExpressEngine({
-    bootstrap: AppServerModule,
-  }));
+    // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
+    server.engine('html', ngExpressEngine({
+        bootstrap: AppServerModule,
+    }));
 
-  server.set('view engine', 'html');
-  server.set('views', distFolder);
+    server.set('view engine', 'html');
+    server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
-  server.get('*.*', express.static(distFolder, {
-    maxAge: '1y'
-  }));
+    // Example Express Rest API endpoints
+    // server.get('/api/**', (req, res) => { });
+    // Serve static files from /browser
+    server.get('*.*', express.static(distFolder, {
+        maxAge: '1y'
+    }));
 
-  // All regular routes use the Universal engine
-  server.get('*', (req, res) => {
-    if(!req.secure){
-      return res.redirect("https://" + req.headers.host + req.url);
-    }
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
-  });
+    // All regular routes use the Universal engine
+    server.get('*', (req, res) => {
+        res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    });
 
-  return server;
+    return server;
 }
 
 function run(): void {
-  const port = process.env['PORT'] || 4000;
-  const serverhttp = app();
-// https certificates
-    const privateKey = fs.readFileSync('/etc/letsencrypt/live/iuapp.cl/privkey.pem');
-    const certificate = fs.readFileSync('/etc/letsencrypt/live/iuapp.cl/fullchain.pem');
+    const port = process.env['PORT'] || 4200;
+
     // Start up the Node server
-    const server = https.createServer({ key: privateKey, cert: certificate }, app());
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
-  serverhttp.listen(80, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
+    const server = app();
+    server.listen(port, () => {
+        console.log(`Node Express server listening on http://localhost:${port}`);
+    });
 }
 
 // Webpack will replace 'require' with '__webpack_require__'
@@ -65,7 +58,7 @@ declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;
 const moduleFilename = mainModule && mainModule.filename || '';
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
-  run();
+    run();
 }
 
 export * from './src/main.server';

@@ -2,9 +2,25 @@ li a {
     font-weight: 590;
     cursor: pointer;
 }
+header + div{
+    position: fixed;
+    width: 100%;
+    margin-top: -79px;
+    height: 80px;
+    background-color: #fff;
+    z-index: 100;
+}
+.hidden-shadow{
+    height: 35px;
+    background-color: #fcfcfc;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    z-index: 100;
+}
 
-@media (min-width: 1700px) {
-    header {
-        padding-left: 60px;
+@media (max-width: 991px) {
+    header, header + div {
+        border-radius: 0 0 40px 40px;
     }
 }

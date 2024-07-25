@@ -1,12 +1,11 @@
 module.exports = {
-    apps : [
+    apps: [
         {
-            name: "gl-api",
-            script: "yarn serve:ssr",
+            name: "landin-page-iu",
+            script: "dist/landin_page_IU/server/main.js",
             watch: false,
             env: {
-                "PORT": 443,
-                "IP": "0.0.0.0",
+                "PORT": 3000,
                 "NODE_ENV": "production"
             }
         }

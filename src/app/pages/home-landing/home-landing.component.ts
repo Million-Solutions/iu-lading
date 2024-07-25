@@ -1,6 +1,9 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../../shared/services/message.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PlanService } from '../../shared/services/plan.service';
+import { Plan, Plans } from '../../shared/models/plan.model';
 
 @Component({
   selector: 'app-home-landing',
@@ -9,16 +12,21 @@ import { MessageService } from '../../shared/services/message.service';
 })
 
 export class HomeLandingComponent implements OnInit {
-  price: Array<string> = ['$35.000','$65.000','$90.000']
-  alert: any = {type: '', text: ''}
+  price: 'M' | 'S' | 'Y' = 'M'
+  alert = {type: '', text: ''}
   spinner: boolean = false
+  plans: Plans = {M: [], S: [], Y: []}
 
-  constructor(private messageSv: MessageService){
+  constructor(
+    private messageSv: MessageService,
+    private planSv: PlanService,
+    private modalSv: NgbModal,
+  ){
 
   }
 
   ngOnInit(): void {
-      
+      this.listPlans()
   }
 
   formMessage = new FormGroup({
@@ -27,6 +35,13 @@ export class HomeLandingComponent implements OnInit {
     business: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required)
   })
+
+  listPlans(){
+    this.planSv.getPlans().subscribe(({body}:any) =>{
+      this.plans = body
+      console.log(body)
+    })
+  }
 
   sendMessage(form:any){
     if(this.formMessage.invalid) return this.MyAlert('danger', 'Por favor asegurese de haber llenado todos los campos')
@@ -38,6 +53,10 @@ export class HomeLandingComponent implements OnInit {
     }).catch(error =>{
       this.MyAlert('danger', error.error.message)
     })
+  }
+
+  openModal(content:any){
+    this.modalSv.open(content, {modalDialogClass: 'my-modal-sm'}) 
   }
 
   MyAlert(type: string, text: string){

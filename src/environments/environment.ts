@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL:"https://api.iuapp.cl"
+  API_URL:"https://27e8-190-24-26-226.ngrok-free.app"
 };
 
 /*

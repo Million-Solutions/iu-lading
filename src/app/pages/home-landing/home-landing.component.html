@@ -32,7 +32,7 @@
         IU App Contable es el partner tecnológico que todo contador independiente y estudio contable necesita para lograr que su negocio siga creciendo. 
         Es una plataforma y app móvil en la nube intuitiva, interactiva y muy versátil para hacer más eficiente la entrega de tu servicio contable.
       </p>
-      <button class="btn-1 rounded-pill" (click)="ScrollInto(bestOption)">¡Quiero saber más!</button>
+      <button class="btn btn-1 rounded-pill" (click)="ScrollInto(bestOption)">¡Quiero saber más!</button>
   </section>
     <section class="container text-lg-start text-center">
       <section class="d-flex justify-content-between align-items-center flex-wrap mt-5">
@@ -82,14 +82,13 @@
         <h2 class="fs-7 my-3">¿Qué es <span class="color-1">IU App Contable</span>?</h2>
         <p class="fs-5">IU App es una plataforma y app móvil que permite interactuar a contadores independientes y estudios contables con sus clientes de forma 100% digital.</p>
       </div>
-      <div class="col-xxl-5 col-lg-6 col-sm-10 col-12 mx-auto p-relative">
+      <div class="col-xxl-5 col-lg-6 col-sm-10 col-12 mx-auto position-relative">
         <iframe width="100%" height="314" src="https://www.youtube.com/embed/7acz4obJdM8" title="IU App" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p id="howDoesItWorki"></p>
       </div>
     </section>
     
     <div class="mx-auto mt-5 pt-2">
-      <h2 class="text-center fs-7">¿Cómo funciona?</h2>
+      <h2 class="text-center fs-7" id="howDoesItWorki">¿Cómo funciona?</h2>
       <div class="container d-flex mx-auto text-center flex-wrap">
         <div class="d-flex flex-column col-xxl-3 col-lg-5 col-md-9 col-sm-9 col-12 mx-auto align-items-center mt-5">
           <img class="px-xl-0 px-lg-4 px-5" src="../../../assets/img/HowDoesItWork/Frame 31430.svg" alt="HowDoesItWork" width="75%">
@@ -123,7 +122,7 @@
   </section>
 
   <!-- blue panel -->
-  <section class="d-flex blue-panel justify-content-end align-items-center flex-wrap p-relative" style="margin-top: calc(1vh * 10)">
+  <section class="d-flex blue-panel justify-content-end align-items-center flex-wrap position-relative" style="margin-top: calc(1vh * 10)">
     <div class="col-12 col-md-12 col-lg-8 d-flex flex-column align-items-center mt-5 px-4 px-lg-0">
       <div class="col-12 col-md-9 col-lg-9 col-xl-8 col-xxl-6">
         <h2 class="fs-7" style="max-width: 450px;">IU App Contable es <span class="color-1">Rapidez y Eficiencia</span></h2>
@@ -131,15 +130,14 @@
           Con tan solo suscribirte a alguno de nuestros planes, lograrás ser más eficiente en los tiempos de respuesta a tus clientes, 
           el cumplimiento de plazos, mantener un historial de mensajes con tus clientes,  generación de alertas de recordatorio, entre otros.
         </p>
-        <button class="btn-1 rounded-pill mb-4">¡Quiero la aplicación!</button>
+        <button class="btn btn-1 rounded-pill mb-4">¡Quiero la aplicación!</button>
       </div>
     </div>
     <img class="col-9 col-md-7 col-lg-4 mt-5" src="assets/img/landing/mobileDualView.svg" alt="mobileDualView" />
-    <p id="features"></p>
   </section> 
   
   <!-- digitalize service -->
-  <h2 class="text-center fs-7 mb-3 mb-lg-5 mx-4" style="margin-top: calc(1vh * 20);">Con nosotros podrás <span class="color-1">digitalizar tu servicio contable</span></h2>
+  <h2 class="text-center fs-7 mb-3 mb-lg-5 mx-4" id="features" style="margin-top: calc(1vh * 20);">Con nosotros podrás <span class="color-1">digitalizar tu servicio contable</span></h2>
   <div class="container d-flex flex-wrap justify-content-around gap-1">
     <div class="col-11 col-lg-4 d-column d-lg-flex text-center text-lg-start mt-3 justify-content-center">
       <i class="fas fa-mobile-alt fs-1 color-1 me-0 me-lg-4"></i>
@@ -245,7 +243,7 @@
   </div>
 
   <!-- Still not convinced -->
-  <div class="container d-flex p-relative justify-content-around flex-wrap" style="margin-top: calc(1vh * 16)">
+  <div class="container d-flex position-relative justify-content-around flex-wrap" style="margin-top: calc(1vh * 16)">
     <div class="col-11 col-sm-12 col-lg-5 col-xxl-5">
       <h2 class="fs-7">¿Aún no estás convencido de que IU App es lo que tu negocio contable necesita?</h2>
       <h2 class="color-1 my-4">Aquí 4 razones que te harán cambiar de opinión:</h2>
@@ -267,72 +265,35 @@
       </div>
     </div>
     <img class="col-8 col-md-7 col-lg-5 col-xxl-5" src="assets/img/landing/mobileViewTertiaryCircleBehind.svg" alt="mobileViewTertiaryCircleBehind" width="100%" />
-    <p id="prices"></p>
   </div>
 
   <!-- plans-->
   <section class="py-5" style="margin-top: calc(1vh * 10)">
-    <h2 class="fs-8 text-center"><b>Planes</b></h2>
+    <h2 class="fs-8 text-center" id="prices"><b>Planes</b></h2>
     <p class="text-center w-100 fw-500 mx-auto fs-5" style="max-width: 450px;">¡No esperes más y haz que tu negocio contable comience a crecer!</p>
     <div class="d-flex justify-content-center gap-3 my-2">
-      <button (click)="price = ['$35.000','$65.000','$90.000']" [style.opacity]="price[0] != '$35.000' ? .5 : 1" class="btn btn-3 fw-500 px-3 py-2">Mensual</button>
-      <button (click)="price = ['$200.000','$370.000','$510.000']" [style.opacity]="price[0] != '$200.000' ? .5 : 1" class="btn btn-3 fw-500 px-3 py-2">Semestral</button>
-      <button (click)="price = ['$390.000','$725.000','$1.005.000']" [style.opacity]="price[0] != '$390.000' ? .5 : 1" class="btn btn-3 fw-500 px-3 py-2">Anual</button>
+      <button (click)="price = 'M'" [style.opacity]="price == 'M' ? 1 : .5" class="btn btn-3 fw-500 px-3 py-2">Mensual</button>
+      <button (click)="price = 'S'" [style.opacity]="price == 'S' ? 1 : .5" class="btn btn-3 fw-500 px-3 py-2">Semestral</button>
+      <button (click)="price = 'Y'" [style.opacity]="price == 'Y' ? 1 : .5" class="btn btn-3 fw-500 px-3 py-2">Anual</button>
     </div>
     <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap p-3">
-      <div class="shadow d-flex flex-column text-center gap-2 rounded-16 mx-2" style="padding: 30px; width: 350px; height: 600px;">
-        <h2 class="mb-3">Plan Estándar</h2>
-        <div class="d-flex align-items-center gap-3">
+      <div class="shadow d-flex flex-column text-center gap-2 rounded-16 mx-2" *ngFor="let item of plans[price]" style="padding: 30px; width: 350px; height: 600px;">
+        <h2 class="mb-3">{{item.name}}</h2>
+        <div class="d-flex align-items-center gap-3" *ngIf="item.full_access">
           <i class="fas fa-check-circle fs-4 color-1"></i>
           <span class="text-start">Acceso completo para contadores y clientes a la plataforma.</span>
         </div>
         <div class="d-flex align-items-center gap-3 my-2">
           <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">Agrega hasta 20 clientes</span>
+          <span class="text-start">Agrega hasta {{item.clients_number}} clientes</span>
         </div>
-        <div class="d-flex align-items-center gap-3">
+        <div class="d-flex align-items-center gap-3" *ngIf="item.app">
           <i class="fas fa-check-circle fs-4 color-1"></i>
           <span class="text-start">App iOS y Android para tus clientes.</span>
         </div>
-        <span class="mt-auto fs-3 fw-500">{{price[0]}}</span>
+        <span class="mt-auto fs-3 fw-500">${{item.amount}}</span>
         <span class="fw-500">IVA Incluido</span>
-        <button class="btn-1 rounded-pill btn mt-2 mx-auto">¡Quiero éste plan!</button>
-      </div>
-      <div class="shadow d-flex flex-column text-center gap-2 rounded-16 mx-2" style="padding: 30px; width: 350px; height: 600px;">
-        <h2 class="mb-3">Plan Silver</h2>
-        <div class="d-flex align-items-center gap-3">
-          <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">Acceso completo para contadores y clientes a la plataforma.</span>
-        </div>
-        <div class="d-flex align-items-center gap-3 my-2">
-          <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">Agrega hasta 50 clientes</span>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">App iOS y Android para tus clientes.</span>
-        </div>
-        <span class="mt-auto fs-3 fw-500">{{price[1]}}</span>
-        <span class="fw-500">IVA Incluido</span>
-        <button class="btn-1 rounded-pill btn mt-2 mx-auto">¡Quiero éste plan!</button>
-      </div>
-      <div class="shadow d-flex flex-column text-center gap-2 rounded-16 mx-2" style="padding: 30px; width: 350px; height: 600px;">
-        <h2 class="mb-3">Plan Gold</h2>
-        <div class="d-flex align-items-center gap-3">
-          <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">Acceso completo para contadores y clientes a la plataforma.</span>
-        </div>
-        <div class="d-flex align-items-center gap-3 my-2">
-          <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">Agrega hasta 80 clientes.</span>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <i class="fas fa-check-circle fs-4 color-1"></i>
-          <span class="text-start">App iOS y Android para tus clientes.</span>
-        </div>
-        <span class="mt-auto fs-3 fw-500">{{price[2]}}</span>
-        <span class="fw-500">IVA Incluido</span>
-        <button class="btn-1 rounded-pill btn mt-2 mx-auto">¡Quiero éste plan!</button>
+        <button class="btn-1 rounded-pill btn mt-2 mx-auto" (click)="openModal(content)">¡Quiero éste plan!</button>
       </div>
       <div class="shadow d-flex flex-column text-center gap-2 rounded-16 mx-2" style="padding: 30px; width: 350px; height: 600px;">
         <h2 class="mb-3">Plan Enterprise</h2>
@@ -352,7 +313,7 @@
           <i class="fas fa-check-circle fs-4 color-1"></i>
           <span class="text-start">Soporte ultra.</span>
         </div>
-        <button class="btn-1 rounded-pill btn mt-2 mt-auto mx-auto">¡Quiero éste plan!</button>
+        <button class="btn-1 rounded-pill btn mt-2 mt-auto mx-auto" (click)="form.scrollIntoView({ behavior: 'smooth', block: 'center' })">Contactanos</button>
       </div>
     </div>
   </section>
@@ -480,7 +441,7 @@
   <section class="dark-blue-panel" style="margin-top: calc(1vh * 14); padding-top: calc(1vh * 14); padding-bottom: calc(1vh * 14);">
     <div class="container bg-white rounded-16 p-5">
       <div class="d-flex flex-wrap align-items-center">
-        <h2 class="me-4 fs-7 fw-500">¡Conversemos!</h2>
+        <h2 class="me-4 fs-7 fw-500" #form>¡Conversemos!</h2>
       </div>
       <form class="row g-4 mt-1" [formGroup]="formMessage" id="form">
         <div class="col-md-6">
@@ -527,3 +488,15 @@
     </div>
   </section>
 </main>
+<ng-template let-modal #content>
+  <div class="modal-header">
+    <h5 class="modal-title color-1" id="exampleModalLabel">Vamos a comenzar!</h5>
+    <button type="button" class="btn-close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body text-center">
+      Antes de comprar un plan debemos registrarte para luego disfrutar de todos los beneficios que IU-APP tiene para ti!.
+  </div>
+  <div class="modal-footer">
+      <a class="btn btn-1 btn-1-md rounded-pill" href="https://app.iuapp.cl/auth/sign-up?step=1">Ir al registro</a>
+  </div>
+</ng-template>
