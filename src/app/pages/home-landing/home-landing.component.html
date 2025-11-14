@@ -291,9 +291,10 @@
           <i class="fas fa-check-circle fs-4 color-1"></i>
           <span class="text-start">App iOS y Android para tus clientes.</span>
         </div>
-        <span class="mt-auto fs-3 fw-500">${{item.amount}}</span>
+        <button class="btn-1 rounded-pill btn mt-2 mt-auto mx-auto" (click)="form.scrollIntoView({ behavior: 'smooth', block: 'center' })">Contactanos</button>
+        <!-- <span class="mt-auto fs-3 fw-500">${{item.amount}}</span>
         <span class="fw-500">IVA Incluido</span>
-        <button class="btn-1 rounded-pill btn mt-2 mx-auto" (click)="openModal(content)">¡Quiero éste plan!</button>
+        <button class="btn-1 rounded-pill btn mt-2 mx-auto" (click)="openModal(content)">¡Quiero éste plan!</button> -->
       </div>
       <div class="shadow d-flex flex-column text-center gap-2 rounded-16 mx-2" style="padding: 30px; width: 350px; height: 600px;">
         <h2 class="mb-3">Plan Enterprise</h2>
@@ -356,7 +357,7 @@
           </div>
       </div>
     </div>
-    <div class="accordion-item">
+    <!-- <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingFour">
         <button class="accordion-button collapsed fs-5 fw-590" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
           ¿Cuánto cuesta?
@@ -373,7 +374,7 @@
           </ul>
           </div>
       </div>
-    </div>
+    </div> -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingFive">
         <button class="accordion-button collapsed fs-5 fw-590" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
@@ -469,7 +470,7 @@
           </div>
         </div>
         <div class="d-flex gap-3">
-          <small>Al continuar, acepto <b><a href="https://intercom.help/iu-app/es/articles/6827422-terminos-y-condiciones" target="_blank" class="text-dark"> políticas y condiciones y política de privacidad</a></b></small>
+          <small>Al continuar, acepto <b><a routerLink="/terms-and-conditions" class="text-dark"> políticas y condiciones y política de privacidad</a></b></small>
           <div class="position-relative ms-auto">
             <button class="btn btn-1 rounded-pill" (click)="sendMessage(formMessage.value)"><span [style.opacity]="spinner ? 0 : 1">Enviar Mensaje</span></button>
             <div class="position-absolute top-0 end-0 bottom-0 start-0 text-center p-2" *ngIf="spinner">
